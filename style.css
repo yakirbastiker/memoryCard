@@ -1,0 +1,147 @@
+:root{
+    --color-background: #6800BF;
+    --color-box-shadow: #45007F;
+    --color-card: #8B00FF;
+    --color-text: #230040;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: var(--color-background);
+    max-width: 1400px;
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    color: var(--color-text);
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.title {
+    font-size: 2em;
+}
+
+.btn{
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all .3s;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    box-shadow: 5px 5px 10px var(--color-box-shadow);
+}
+
+.btn-input {
+    background-color: var(--color-background);
+    margin-top: 20px;
+}
+
+.btn-input:hover {
+    box-shadow: 5px 5px 10px var(--color-card);
+}
+
+.card {
+    border: 1px solid #333;
+    margin: 20px 0;
+    min-height: 400px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 10px 10px 10px var(--color-box-shadow);
+    position: relative;
+}
+
+.card-text {
+ /*   animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite; */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    max-width: max-content;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.left-arrow {
+    transform:  rotate(180deg);
+}
+
+.flip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all .3s;
+}
+
+.flip:hover {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-box-shadow);
+    padding: 20px;
+    flex-direction: column;
+    backdrop-filter: blur(1px);
+}
+
+.input {
+    padding: 30px 80px;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+    font-size: 2em;
+    color:  var(--color-text);
+}
+
+label {
+    font-size: 2em;
+    color: var(--color-text);
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
